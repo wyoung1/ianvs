@@ -105,7 +105,7 @@ class MultiedgeInference(ParadigmBase):
             output_names = point['output_names']
             sub_model_path = sub_model_dir + '/' + 'sub_model_' + str(idx+1) + '.onnx'
             try:
-                onnx.utils.extract_model(initial_model_path, 
+                onnx.utils.extract_model(initial_model_path,
                                          sub_model_path, input_names, output_names)
             except Exception as e:
                 LOGGER.info(str(e))
